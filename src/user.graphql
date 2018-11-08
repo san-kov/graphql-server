@@ -10,6 +10,16 @@ type User {
   lastName: String!
   age: Int!
   email: String!
+  profile: Profile
+}
+
+input ProfileInput {
+  favoriteColor: String!
+}
+
+type Profile {
+  id: Int!
+  favoriteColor: String!
 }
 
 type Mutation {
@@ -18,6 +28,7 @@ type Mutation {
     lastName: String!
     age: Int!
     email: String!
+    profile: ProfileInput
   ): User!
   updateUser(
     firstName: String!
