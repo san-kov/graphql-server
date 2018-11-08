@@ -1,5 +1,5 @@
-# Awesome Project Build with TypeORM
-        
+# Server Boilerplate implemented with GraphQL, TypeScript, TypeORM
+
 Steps to run this project:
 
 1. Run `npm i` command
