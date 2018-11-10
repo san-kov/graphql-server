@@ -6,9 +6,10 @@ import { createConnection } from "typeorm";
 
 const typeDefs = fs.readFileSync(path.join(__dirname, "user.graphql"), "utf8");
 import resolvers from "./resolvers";
-
 const server = new GraphQLServer({ typeDefs, resolvers });
 
-createConnection().then(() => {
-  server.start(() => console.log("server is running"));
-});
+(async () => {
+  await createConnection();
+  await server.start();
+  console.log("server is running");
+})();
